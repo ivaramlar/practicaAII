@@ -1,0 +1,16 @@
+
+{% block titulo %}Categorias {% endblock %}    
+
+{% block content %}
+<h1>Lista de Modelos</h1>
+<div>
+    {% for categoria in categorias %}
+        <div>
+            <h2>{{ categoria.idCategoria }}</h2>
+            <p><strong>Nombre:</strong> {{ categoria.nombre }}</p>
+        </div>
+    {% empty %}
+    <p>No hay modelos disponibles.</p>
+    {% endfor %}
+</div>
+{% endblock %}
